@@ -32,12 +32,12 @@ jobs:
         with:
           otp-version: ${{ matrix.otp }}
           elixir-version: ${{ matrix.elixir }}
-      - uses: actions/cache@9df7d7c016256c51d661e5d26a8632ccd0581680
-        with:
-          path: deps
-          key: ${{ runner.os }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
-          restore-keys: |
-            ${{ runner.os }}-mix-
+#       - uses: actions/cache@9df7d7c016256c51d661e5d26a8632ccd0581680
+#         with:
+#           path: deps
+#           key: ${{ runner.os }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+#           restore-keys: |
+#             ${{ runner.os }}-mix-
 #       - name: Install Dependencies
 #         run: |
 #           rm -rf deps _build
