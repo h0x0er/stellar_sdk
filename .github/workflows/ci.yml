@@ -38,10 +38,10 @@ jobs:
           key: ${{ runner.os }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
           restore-keys: |
             ${{ runner.os }}-mix-
-      - name: Install Dependencies
-        run: |
-          rm -rf deps _build
-          mix deps.get
+#       - name: Install Dependencies
+#         run: |
+#           rm -rf deps _build
+#           mix deps.get
 #       - name: Check Formatting
 #         run: mix format --check-formatted
 #       - name: Run Tests
